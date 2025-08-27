@@ -247,7 +247,7 @@
       nav.desktop {
         display: flex;
       }
-
+      
       .cta {
         display: inline-flex;
       }
@@ -308,4 +308,13 @@
       display: flex;
       gap: 12px;
       align-items: center;
-    }
+    } 
+    
+      @media (max-width: 767px) {
+  .cta {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+  }
+}
