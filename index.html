@@ -1,105 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Espaço Grill</title>
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gradient-to-b from-amber-50 via-white to-white text-zinc-900">
-
+<body>
   <!-- Topbar -->
-  <div class="w-full bg-zinc-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 py-2 flex items-center justify-between gap-4 text-sm">
-      <div class="flex items-center gap-6">
-      </div>
-      <div class="flex items-center gap-3">
-        <button class="bg-white text-zinc-900 px-3 py-1 rounded-lg flex items-center gap-2"><i data-lucide="phone-call" class="w-4 h-4"></i> WhatsApp</button>
-        <button class="border border-white/30 text-white px-3 py-1 rounded-lg flex items-center gap-2"><i data-lucide="instagram" class="w-4 h-4"></i> Instagram</button>
+  <div class="topbar">
+    <div class="container">
+      <div class="inner">
+        <div></div>
+        <div class="right">
+          <a class="btn primary" href="https://wa.me/message/YZFFW532Q4NZH1" target="_blank">WhatsApp</a>
+          <a class="btn ghost" href="https://www.instagram.com/churrascariaespacogrill" target="_blank">Instagram</a>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Navbar -->
-  <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-        <div class="">
-        <img src="assets/84550543_573705629848466_4845081052462448640_n-removebg-preview (1).png"></i>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src="assets/84550543_573705629848466_4845081052462448640_n-removebg-preview (1).png" alt="Espaço Grill logo">
+        <div class="texts">
+          <div class="title">Churrascaria Espaço Grill</div>
+          <div class="subtitle">Rodízio de Churrasco</div>
+        </div>
       </div>
-      <div>
-        <div class="text-xl font-bold tracking-tight">Churrascaria Espaço Grill</div>
-        <div class="text-xs text-zinc-500 -mt-1">Rodízio de Churrasco</div>
+
+      <nav class="desktop">
+        <a href="#rodizio">Rodízios</a>
+        <a href="#menu">Carnes</a>
+        <a href="#kids">Espaço Kids</a>
+        <a href="#drinks">Drinks</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="row">
+        <div class="mobile-nav-toggle">
+          <button class="hamburger" aria-label="Abrir menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+            ☰
+          </button>
+        </div>
+        <a class="cta btn" href="#" style="border: 1px solid #e5e7eb; padding: 10px 18px; border-radius: 999px;">Compre aqui seu rodízio completo com desconto</a>
       </div>
-    </div>
-    <nav class="hidden md:flex items-center gap-6 text-sm">
-      <a href="#rodizio" class="hover:text-amber-600">Rodízios</a>
-      <a href="#menu" class="hover:text-amber-600">Carnes</a>
-      <a href="#kids" class="hover:text-amber-600">Espaço Kids</a>
-      <a href="#drinks" class="hover:text-amber-600">Drinks</a>
-      <a href="#contato" class="hover:text-amber-600">Contato</a>
-    </nav>
-    <div class="flex items-center gap-3">
-      <button class="border px-4 py-2 rounded-2xl hidden md:flex items-center gap-2"> Compre aqui seu rodízio completo com desconto<i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+    </header>
+
+    <div id="mobileMenu" class="mobile-menu" style="display: none;">
+      <div style="padding: 8px 0;">
+        <a href="#rodizio" style="display: block; padding: 8px 0; text-decoration: none; color: inherit;">Rodízios</a>
+        <a href="#menu" style="display: block; padding: 8px 0; text-decoration: none; color: inherit;">Carnes</a>
+        <a href="#kids" style="display: block; padding: 8px 0; text-decoration: none; color: inherit;">Espaço Kids</a>
+        <a href="#drinks" style="display: block; padding: 8px 0; text-decoration: none; color: inherit;">Drinks</a>
+        <a href="#contato" style="display: block; padding: 8px 0; text-decoration: none; color: inherit;">Contato</a>
+      </div>
     </div>
   </div>
 
   <!-- Hero -->
-  <div class="relative">
-    <div class="absolute inset-0 bg-black/60"></div>
-    <img src="assets/buffetexample.webp" class="w-full h-[70vh] object-cover">
-    <div class="absolute inset-0 flex items-end pb-10 px-6 max-w-3xl text-white">
-      <div>
-        <h1 class="text-4xl md:text-6xl font-extrabold">Rodízio com mais de 15 opções de carnes.</h1>
-        <p class="mt-3 text-lg md:text-xl">E mais: buffet com pratos quentes, saladas, sushi e sobremesas, em um ambiente moderno.</p>
-        <button class="bg-amber-500 text-white px-4 py-2 rounded-2xl">Reservar agora</button>
-        <div class="mt-6 flex gap-3">
-        </div>
+  <section class="hero">
+    <img class="bg" src="assets/buffetexample.webp" alt="Buffet">
+    <div class="overlay"></div>
+    <div class="content container">
+      <h1>Rodízio com mais de 15 opções de carnes.</h1>
+      <p>E mais: buffet com pratos quentes, saladas, sushi e sobremesas, em um ambiente moderno.</p>
+      <div class="hero-actions">
+        <a class="btn-reserve" href="#contato">Reservar agora</a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Seções (Rodízio, Sabores, Kids, Drinks, Contato, Footer) -->
-  <!-- Aqui você pode repetir os blocos do React, convertendo em divs + Tailwind da mesma forma -->
+  <!-- Sections (placeholders) -->
+  <main class="container sections">
+    <section id="rodizio">
+      <h2>Rodízio</h2>
+      <p class="muted">Informações sobre nossos rodízios e preços.</p>
+    </section>
+
+    <section id="menu" style="margin-top: 18px;">
+      <h2>Carnes</h2>
+      <p class="muted">Lista de carnes servidas no rodízio.</p>
+    </section>
+
+    <section id="kids" style="margin-top: 18px;">
+      <h2>Espaço Kids</h2>
+      <p class="muted">Atividades e espaço para crianças.</p>
+    </section>
+
+    <section id="drinks" style="margin-top: 18px;">
+      <h2>Drinks</h2>
+      <p class="muted">Cocktails e bebidas especiais.</p>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="mt-16 border-t">
-    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-8 text-sm">
-      <div>
-        <div class="flex items-center gap-2 mb-2">
-          <div class=""> <img src="assets/84550543_573705629848466_4845081052462448640_n-removebg-preview (1).png" alt="" style="width: 70px;"></div>
-          <span class="font-bold">Espaço Grill</span>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <img src="assets/84550543_573705629848466_4845081052462448640_n-removebg-preview (1).png" alt="logo" style="width: 70px;">
+            <div>
+              <div style="font-weight: 800;">Espaço Grill</div>
+            </div>
+          </div>
+          <p class="muted">Rodízio de churrasco desde 2010. Espaço kids e drinks.</p>
         </div>
-        <p class="text-zinc-500">Rodízio de churrasco desde 2010. Espaço kids e drinks.</p>
+
+        <div>
+          <h5>Horários</h5>
+          <ul style="list-style: none; padding: 0; margin: 0; color: var(--muted);">
+            <li>Terça–Sexta: 11:30-14:00 no Almoço, 19:20-23:00 Janta</li>
+            <li>Sábado: 11:30-14:30 no Almoço, 19:20-23:00 Janta</li>
+            <li>Domingo: 11:30-15:00 no Almoço, Fechado a noite</li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Serviços</h5>
+          <ul style="list-style: none; padding: 0; margin: 0; color: var(--muted);">
+            <li>Rodízios</li>
+            <li>Eventos & Aniversários</li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Endereço</h5>
+          <p class="muted">Av Getúlio Vargas 2301, São Leopoldo 93025-115</p>
+          <a class="map-btn" href="#">Abrir no mapa</a>
+        </div>
       </div>
-      <div>
-        <h5 class="font-semibold mb-2">Horários</h5>
-        <ul class="space-y-1 text-zinc-500">
-          <li>Terça–Sexta: 11:30-14:00 no Almoço, 19:20-23:00 Janta</li>
-          <li>Sábado: 11:30-14:30 no Almoço, 19:20-23:00 Janta</li>
-          <li>Domingo: 11:30-15:00 no Almoço, Fechado a noite</li>
-        </ul>
-      </div>
-      <div>
-        <h5 class="font-semibold mb-2">Serviços</h5>
-        <ul class="space-y-1 text-zinc-500">
-          <li>Rodízios</li>
-          <li>Eventos & Aniversários</li>
-        </ul>
-      </div>
-      <div>
-        <h5 class="font-semibold mb-2">Endereço</h5>
-        <p class="text-zinc-500">Av Getúlio Vargas 2301, São Leopoldo 93025-115</p>
-        <button class="border px-3 py-2 mt-3 w-full rounded-2xl">Abrir no mapa</button>
-      </div>
+      <div class="copyright">© 2025 Espaço Grill – Todos os direitos reservados.</div>
     </div>
-    <div class="py-4 text-center text-xs text-zinc-500">© 2025 Espaço Grill – Todos os direitos reservados.</div>
   </footer>
 
   <script>
-    lucide.createIcons(); // inicializa ícones
+    // mobile menu simple toggle
+    (function() {
+      const btn = document.querySelector('.hamburger');
+      const mobile = document.getElementById('mobileMenu');
+      if (!btn || !mobile) return;
+      btn.addEventListener('click', () => {
+        if (mobile.style.display === 'block') {
+          mobile.style.display = 'none';
+        } else {
+          mobile.style.display = 'block';
+        }
+      });
+    })();
   </script>
 </body>
 </html>
