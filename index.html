@@ -1,31 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espaço Grill</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-    <header>
-        <h1>Seja bem vindo ao site da Churrascaria Espaço Grill!</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#localização">Localização</a></li>
-                <li><a href="#agendamento">Faça sua reserva</a></li>
-                <li><a href="#horarios"> Horário de funcionamento</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+<body class="bg-gradient-to-b from-amber-50 via-white to-white text-zinc-900">
 
-        <section id="Home"></section>
-        <h2>Bem-vindo ao Espaço Grill</h2>
-        <p>Experimente o verdadeiro sabor do churrasco gaúcho!</p>
-        <img src="https://st2.depositphotos.com/1672917/6989/i/450/depositphotos_69899447-stock-photo-traditional-brazilian-barbecue.jpg" alt="Conheça o sabor das nossas carnes">
-    </main>
+  <!-- Topbar -->
+  <div class="w-full bg-zinc-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-2 flex items-center justify-between gap-4 text-sm">
+      <div class="flex items-center gap-6">
+      </div>
+      <div class="flex items-center gap-3">
+        <button class="bg-white text-zinc-900 px-3 py-1 rounded-lg flex items-center gap-2"><i data-lucide="phone-call" class="w-4 h-4"></i> WhatsApp</button>
+        <button class="border border-white/30 text-white px-3 py-1 rounded-lg flex items-center gap-2"><i data-lucide="instagram" class="w-4 h-4"></i> Instagram</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+        <div class="">
+        <img src="assets/84550543_573705629848466_4845081052462448640_n-removebg-preview (1).png"></i>
+      </div>
+      <div>
+        <div class="text-xl font-bold tracking-tight">Churrascaria Espaço Grill</div>
+        <div class="text-xs text-zinc-500 -mt-1">Rodízio de Churrasco</div>
+      </div>
+    </div>
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="#rodizio" class="hover:text-amber-600">Rodízios</a>
+      <a href="#menu" class="hover:text-amber-600">Carnes</a>
+      <a href="#kids" class="hover:text-amber-600">Espaço Kids</a>
+      <a href="#drinks" class="hover:text-amber-600">Drinks</a>
+      <a href="#contato" class="hover:text-amber-600">Contato</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button class="border px-4 py-2 rounded-2xl hidden md:flex items-center gap-2"> Compre aqui seu rodízio completo com desconto<i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="relative">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <img src="assets/buffetexample.webp" class="w-full h-[70vh] object-cover">
+    <div class="absolute inset-0 flex items-end pb-10 px-6 max-w-3xl text-white">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold">Rodízio com mais de 15 opções de carnes.</h1>
+        <p class="mt-3 text-lg md:text-xl">E mais: buffet com pratos quentes, saladas, sushi e sobremesas, em um ambiente moderno.</p>
+        <button class="bg-amber-500 text-white px-4 py-2 rounded-2xl">Reservar agora</button>
+        <div class="mt-6 flex gap-3">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seções (Rodízio, Sabores, Kids, Drinks, Contato, Footer) -->
+  <!-- Aqui você pode repetir os blocos do React, convertendo em divs + Tailwind da mesma forma -->
+
+  <!-- Footer -->
+  <footer class="mt-16 border-t">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <div class=""> <img src="assets/84550543_573705629848466_4845081052462448640_n-removebg-preview (1).png" alt="" style="width: 70px;"></div>
+          <span class="font-bold">Espaço Grill</span>
+        </div>
+        <p class="text-zinc-500">Rodízio de churrasco desde 2010. Espaço kids e drinks.</p>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-2">Horários</h5>
+        <ul class="space-y-1 text-zinc-500">
+          <li>Terça–Sexta: 11:30-14:00 no Almoço, 19:20-23:00 Janta</li>
+          <li>Sábado: 11:30-14:30 no Almoço, 19:20-23:00 Janta</li>
+          <li>Domingo: 11:30-15:00 no Almoço, Fechado a noite</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-2">Serviços</h5>
+        <ul class="space-y-1 text-zinc-500">
+          <li>Rodízios</li>
+          <li>Eventos & Aniversários</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-2">Endereço</h5>
+        <p class="text-zinc-500">Av Getúlio Vargas 2301, São Leopoldo 93025-115</p>
+        <button class="border px-3 py-2 mt-3 w-full rounded-2xl">Abrir no mapa</button>
+      </div>
+    </div>
+    <div class="py-4 text-center text-xs text-zinc-500">© 2025 Espaço Grill – Todos os direitos reservados.</div>
+  </footer>
+
+  <script>
+    lucide.createIcons(); // inicializa ícones
+  </script>
 </body>
 </html>
